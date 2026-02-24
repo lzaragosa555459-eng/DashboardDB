@@ -10,13 +10,13 @@ $result = mysqli_query($conn, "SELECT * FROM clients ORDER BY client_id DESC");
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 <?php include "../nav.php"; ?>
 
 <div class="container my-4">
   <div class="d-flex justify-content-between align-items-center mb-3">
     <h2>Clients</h2>
-    <a href="clients_add.php" class="btn btn-success">+ Add Client</a>
+    <a href="clients_add.php" class="btn btn-primary">+ Add Client</a>
   </div>
 
   <div class="table-responsive">
@@ -38,7 +38,7 @@ $result = mysqli_query($conn, "SELECT * FROM clients ORDER BY client_id DESC");
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['phone']; ?></td>
             <td>
-              <a href="clients_edit.php?id=<?php echo $row['client_id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+              <a href="clients_edit.php?id=<?php echo $row['client_id']; ?>" class="btn btn-warning btn-sm">Edit</a>
             </td>
           </tr>
         <?php } ?>
